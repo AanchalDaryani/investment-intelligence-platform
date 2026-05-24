@@ -49,7 +49,7 @@ SELECT
 'Engineering',
 'Trading',
 'Holdings'
-])[floor(random()*30+1)]
+])[floor(random()*30+1)] -- Randomly select a company type from the list
 
 || ' ' ||
 
@@ -91,4 +91,5 @@ ROUND((random()*1000)::numeric,2),
 (random()*1000000)::bigint
 FROM companies
 CROSS JOIN generate_series(1,50);
+
 
